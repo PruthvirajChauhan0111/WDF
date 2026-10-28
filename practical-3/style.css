@@ -437,3 +437,36 @@ footer p {
         animation-duration: 0.01ms !important;
     }
 }
+/* Navigation layout for all 10 options */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 12px;
+    max-width: 1100px;
+    margin: 18px auto 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
