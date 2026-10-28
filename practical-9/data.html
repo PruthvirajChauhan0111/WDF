@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore StudentHub student, event and FAQ JSON data.">
+  <title>Data Explorer | StudentHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="json-data.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a class="logo" href="index.html">StudentHub</a>
+
+        <button id="menuToggle" class="menu-toggle"
+                type="button" aria-label="Toggle navigation"
+                aria-expanded="false">☰</button>
+
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="attendance.html">Attendance</a>
+          <a href="result.html">Results</a>
+          <a href="timetable.html">Timetable</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="data.html" aria-current="page">Data Explorer</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button"
+                aria-label="Toggle light and dark theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="data-page">
+    <section class="data-hero">
+      <div class="container">
+        <p class="data-eyebrow">STUDENTHUB · PRACTICAL 06</p>
+        <h1>Explore your data<span>.</span></h1>
+        <p>Search, filter and sort student records, campus events and FAQs
+           using live JSON data.</p>
+      </div>
+    </section>
+
+    <section class="container data-explorer" aria-labelledby="explorerTitle">
+      <div class="explorer-heading">
+        <div>
+          <p class="data-eyebrow">DATA WORKSPACE</p>
+          <h2 id="explorerTitle">Data Explorer</h2>
+          <p>Choose a dataset and explore its records.</p>
+        </div>
+        <span class="api-label"><span></span> Fetch API</span>
+      </div>
+
+      <div class="data-controls">
+        <label>
+          Dataset
+          <select id="datasetSelect">
+            <option value="students">Students</option>
+            <option value="events">Events</option>
+            <option value="faqs">FAQs</option>
+          </select>
+        </label>
+
+        <label class="search-control">
+          Search
+          <input id="dataSearch" type="search"
+                 placeholder="Search records..." autocomplete="off">
+        </label>
+
+        <label>
+          Filter
+          <select id="dataFilter">
+            <option value="">Loading filters…</option>
+          </select>
+        </label>
+
+        <label>
+          Sort by
+          <select id="dataSort">
+            <option value="">Loading sort options…</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="data-results-heading">
+        <span id="resultCount" aria-live="polite"></span>
+        <span class="results-note">6 records per page</span>
+      </div>
+
+      <p id="dataStatus" class="data-status" role="status" aria-live="polite">
+        Loading data…
+      </p>
+
+      <div id="dataResults" class="data-grid"></div>
+      <nav id="pagination" class="data-pagination"
+           aria-label="Data pages"></nav>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 StudentHub · WDF Practical 6</p>
+      <p>Built by Pruthviraj Chauhan</p>
+    </div>
+  </footer>
+</body>
+</html>

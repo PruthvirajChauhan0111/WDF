@@ -1,0 +1,17 @@
+[
+  {"id":1,"title":"Web Development Workshop","category":"Workshop","date":"2026-11-05","location":"Computer Lab 1"},
+  {"id":2,"title":"Annual Sports Day","category":"Sports","date":"2026-11-08","location":"University Ground"},
+  {"id":3,"title":"Coding Competition","category":"Competition","date":"2026-11-12","location":"Innovation Lab"},
+  {"id":4,"title":"Career Guidance Seminar","category":"Seminar","date":"2026-11-15","location":"Seminar Hall"},
+  {"id":5,"title":"AI and Machine Learning","category":"Workshop","date":"2026-11-18","location":"Computer Lab 2"},
+  {"id":6,"title":"Photography Contest","category":"Competition","date":"2026-11-20","location":"Art Studio"},
+  {"id":7,"title":"Inter-College Cricket","category":"Sports","date":"2026-11-22","location":"Sports Ground"},
+  {"id":8,"title":"Cyber Security Talk","category":"Seminar","date":"2026-11-24","location":"Auditorium"},
+  {"id":9,"title":"UI/UX Design Workshop","category":"Workshop","date":"2026-11-26","location":"Design Lab"},
+  {"id":10,"title":"Hackathon 2026","category":"Competition","date":"2026-11-28","location":"Innovation Hub"},
+  {"id":11,"title":"Badminton Tournament","category":"Sports","date":"2026-12-01","location":"Indoor Stadium"},
+  {"id":12,"title":"Cloud Computing Seminar","category":"Seminar","date":"2026-12-03","location":"Seminar Hall"},
+  {"id":13,"title":"JavaScript Bootcamp","category":"Workshop","date":"2026-12-05","location":"Computer Lab 1"},
+  {"id":14,"title":"Project Exhibition","category":"Competition","date":"2026-12-08","location":"Main Hall"},
+  {"id":15,"title":"Chess Championship","category":"Sports","date":"2026-12-10","location":"Student Centre"}
+]
