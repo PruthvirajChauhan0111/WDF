@@ -1,0 +1,439 @@
+
+/* =====================================================
+   StudentHub - Practical 3
+   Responsive UI using CSS3, Flexbox and CSS Grid
+   Mobile-first responsive design
+   ===================================================== */
+
+/* 1. Global reset and design variables */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #0f172a;
+    --background: #f1f5f9;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --radius: 14px;
+    --shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* 2. Header */
+header {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: #ffffff;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+header h2 {
+    font-size: 1.15rem;
+    margin: 8px 0;
+}
+
+header p {
+    color: #dbeafe;
+}
+
+/* 3. Navigation: supports both existing HTML layouts */
+nav {
+    margin-top: 18px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 9px 13px;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+nav a:focus-visible {
+    outline-color: #ffffff;
+}
+
+/* 4. Main content */
+main {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 28px 16px;
+    flex: 1;
+}
+
+main > h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+main h3 {
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+section > h2 {
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* 5. Home page container and cards */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--surface);
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-width: 0;
+}
+
+.card h2 {
+    color: var(--secondary);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.card ul li {
+    margin-bottom: 6px;
+}
+
+/* Home page hero */
+.card[style*="text-align:center"] {
+    padding: 28px 18px;
+}
+
+.card img {
+    margin: 0 auto 20px;
+}
+
+/* 6. CSS Grid: responsive cards and content */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Event articles become cards */
+main section:has(> article) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+article {
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+article h3 {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+/* 7. Buttons and action links */
+.btn,
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    margin: 6px 5px 6px 0;
+    background: var(--primary);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+    background: var(--primary-dark);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+input[type="reset"] {
+    background: #475569;
+}
+
+input[type="reset"]:hover {
+    background: #334155;
+}
+
+/* 8. Responsive forms */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 14px 0 6px;
+}
+
+input:not([type="submit"]):not([type="reset"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin-top: 18px;
+}
+
+/* 9. Tables: scroll on small screens */
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    background: var(--surface);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+thead,
+tbody {
+    width: 100%;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+th {
+    background: #dbeafe;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+/* 10. Footer */
+footer {
+    margin-top: auto;
+    padding: 20px 16px;
+    background: var(--secondary);
+    color: #e2e8f0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 11. Tablet layout: 600px and above */
+@media (min-width: 600px) {
+    header {
+        padding: 28px 24px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    main {
+        padding: 36px 24px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main section:has(> article) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+        padding: 26px;
+    }
+}
+
+/* 12. Desktop layout: 900px and above */
+@media (min-width: 900px) {
+    header {
+        padding: 30px 40px;
+    }
+
+    main {
+        padding: 42px 28px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    main section:has(> article) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    nav a {
+        padding: 10px 15px;
+    }
+}
+
+/* 13. Small mobile screens */
+@media (max-width: 400px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px 9px;
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 22px 12px;
+    }
+
+    form,
+    .card,
+    article {
+        padding: 16px;
+    }
+
+    .btn {
+        margin-right: 2px;
+    }
+}
+
+/* 14. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
