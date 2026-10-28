@@ -1,0 +1,213 @@
+
+/* =========================================
+   StudentHub - Practical 5
+   Registration Form Styles
+========================================= */
+
+.register-page {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.register-intro {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.register-intro p {
+    color: var(--muted, #64748b);
+}
+
+.register-form {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.form-section-title {
+    margin: 24px 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border, #e2e8f0);
+    color: var(--text, #1e293b);
+}
+
+.form-hint {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted, #64748b);
+    font-size: 0.88rem;
+}
+
+.field-error {
+    display: block;
+    min-height: 1.2em;
+    margin-top: 5px;
+    color: #b91c1c;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.register-form [aria-invalid="true"] {
+    border-color: #dc2626 !important;
+}
+
+.register-form input[aria-invalid="true"],
+.register-form select[aria-invalid="true"] {
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.12);
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.radio-option input {
+    width: auto;
+    margin: 0;
+    accent-color: var(--primary, #2563eb);
+}
+
+.terms-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.terms-option input {
+    width: auto;
+    min-width: 18px;
+    margin-top: 5px;
+    accent-color: var(--primary, #2563eb);
+}
+
+.password-strength {
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e2e8f0;
+}
+
+.password-strength::before {
+    content: "";
+    display: block;
+    width: var(--strength, 0%);
+    height: 100%;
+    background: #dc2626;
+    transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.password-strength.strength-weak::before {
+    background: #dc2626;
+}
+
+.password-strength.strength-fair::before {
+    background: #d97706;
+}
+
+.password-strength.strength-good::before {
+    background: #2563eb;
+}
+
+.password-strength.strength-strong::before {
+    background: #16a34a;
+}
+
+.strength-text {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted, #64748b);
+    font-size: 0.9rem;
+}
+
+.form-message {
+    margin: 18px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.form-message-error {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.form-message-success {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+.register-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.register-actions input {
+    margin: 0;
+}
+
+.register-login-link {
+    margin-top: 18px;
+    text-align: center;
+}
+
+body.dark-theme .register-form {
+    color: var(--text);
+}
+
+body.dark-theme .form-section-title {
+    color: var(--text);
+}
+
+body.dark-theme .password-strength {
+    background: #475569;
+}
+
+body.dark-theme .field-error {
+    color: #fca5a5;
+}
+
+@media (max-width: 600px) {
+    .register-form {
+        padding: 18px;
+    }
+
+    .radio-group {
+        gap: 12px;
+    }
+
+    .register-actions {
+        flex-direction: column;
+    }
+
+    .register-actions input {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .password-strength::before {
+        transition: none;
+    }
+}

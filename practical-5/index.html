@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub academic student portal with interactive features.">
+    <title>StudentHub | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🎓 StudentHub</h1>
+        <p>Your Academic Journey, All in One Place</p>
+
+        <!-- Theme Switcher -->
+        <button
+            type="button"
+            class="theme-toggle"
+            id="themeToggle"
+            aria-pressed="false">
+            🌙 Dark Mode
+        </button>
+
+        <!-- Mobile Hamburger Menu -->
+        <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="mainNavigation"
+            aria-label="Open navigation menu">
+            ☰ Menu
+        </button>
+
+        <!-- Main Navigation: 10 Options -->
+        <nav id="mainNavigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="card">
+            <h2>Welcome to StudentHub</h2>
+            <p>
+                Your one-stop destination for academic information.
+                Explore courses, check attendance, view results,
+                manage your timetable and discover college events.
+            </p>
+            <a class="btn" href="dashboard.html">Explore Dashboard</a>
+            <a class="btn" href="register.html">Register Now</a>
+        </section>
+
+        <!-- Practical 4: Notification Banner -->
+        <section
+            id="notificationBanner"
+            class="notification-banner"
+            role="status"
+            aria-live="polite">
+
+            <p>
+                <strong>📢 StudentHub Update:</strong>
+                Explore the interactive features of your student portal!
+            </p>
+
+            <button
+                type="button"
+                id="dismissNotification"
+                aria-label="Dismiss notification">
+                ✕
+            </button>
+        </section>
+
+        <div>
+            <button type="button" class="btn" id="showNotification">
+                Show Notification
+            </button>
+        </div>
+
+        <!-- Practical 4: Content Slider -->
+        <section class="slider" aria-label="StudentHub highlights">
+            <h2>StudentHub Highlights</h2>
+
+            <div class="slide" aria-hidden="false">
+                <h3>📚 Explore Your Courses</h3>
+                <p>Discover your academic subjects and learning resources.</p>
+                <a href="courses.html">Explore Courses →</a>
+            </div>
+
+            <div class="slide" hidden aria-hidden="true">
+                <h3>📊 Track Your Attendance</h3>
+                <p>Review your subject-wise attendance information.</p>
+                <a href="attendance.html">Check Attendance →</a>
+            </div>
+
+            <div class="slide" hidden aria-hidden="true">
+                <h3>🎉 Discover College Events</h3>
+                <p>Stay updated about activities, competitions and seminars.</p>
+                <a href="events.html">Explore Events →</a>
+            </div>
+
+            <div class="slider-controls">
+                <button type="button" id="prevSlide">← Previous</button>
+                <span id="slideStatus" aria-live="polite">Slide 1 of 3</span>
+                <button type="button" id="nextSlide">Next →</button>
+            </div>
+        </section>
+
+        <!-- Practical 4: Modal Popup -->
+        <section class="card">
+            <h2>Need Help?</h2>
+            <p>Open the information popup to learn about StudentHub.</p>
+
+            <button type="button" class="btn" id="openModal">
+                About This Portal
+            </button>
+        </section>
+
+        <!-- Modal Content -->
+        <div class="modal-overlay" id="infoModal" hidden>
+            <div
+                class="modal-content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modalTitle">
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    data-close-modal
+                    aria-label="Close popup">
+                    ✕
+                </button>
+
+                <h2 id="modalTitle">About StudentHub</h2>
+
+                <p>
+                    StudentHub is a student portal interface for accessing
+                    courses, attendance, results, timetables and college events.
+                </p>
+
+                <p>
+                    This popup demonstrates JavaScript DOM manipulation
+                    and event handling.
+                </p>
+
+                <button type="button" class="btn" data-close-modal>
+                    Close
+                </button>
+            </div>
+        </div>
+
+        <!-- Practical 4: Collapsible FAQ -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-list">
+
+                <article class="faq-item">
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+                        How do I view my courses?
+                        <span class="faq-symbol" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" hidden>
+                        <p>
+                            Choose Courses from the navigation menu to
+                            view the available subjects.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+                        Where can I check attendance?
+                        <span class="faq-symbol" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" hidden>
+                        <p>
+                            Open the Attendance page to view the
+                            subject-wise attendance table.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+                        Where can I see my results?
+                        <span class="faq-symbol" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" hidden>
+                        <p>
+                            Select Results from the navigation menu
+                            to view the sample academic results page.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false">
+                        Can I use Dark Mode?
+                        <span class="faq-symbol" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer" hidden>
+                        <p>
+                            Yes. Click the Dark Mode button in the header.
+                            Your theme preference is saved in localStorage.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Quick Access -->
+        <section>
+            <h2>Quick Access</h2>
+
+            <div class="grid">
+
+                <article>
+                    <h3>📚 Courses</h3>
+                    <p>Explore the subjects in your academic program.</p>
+                    <a href="courses.html">View Courses →</a>
+                </article>
+
+                <article>
+                    <h3>📊 Attendance</h3>
+                    <p>Check your subject-wise attendance information.</p>
+                    <a href="attendance.html">View Attendance →</a>
+                </article>
+
+                <article>
+                    <h3>🏆 Results</h3>
+                    <p>Review your sample academic results.</p>
+                    <a href="result.html">View Results →</a>
+                </article>
+
+                <article>
+                    <h3>🗓️ Timetable</h3>
+                    <p>Keep track of your weekly class schedule.</p>
+                    <a href="timetable.html">View Timetable →</a>
+                </article>
+
+                <article>
+                    <h3>🎉 Events</h3>
+                    <p>Discover college activities and upcoming events.</p>
+                    <a href="events.html">Explore Events →</a>
+                </article>
+
+                <article>
+                    <h3>✉️ Contact</h3>
+                    <p>Get help from the StudentHub team.</p>
+                    <a href="contact.html">Contact Us →</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+    </footer>
+
+    <!-- Practical 4 JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
