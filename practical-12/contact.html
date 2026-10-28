@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎓 StudentHub</h1>
+        <p>We're Here to Help</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Contact Information</h2>
+            <p>Have a question about StudentHub? Send us a message.</p>
+            <p><strong>Email:</strong> studenthub@example.com</p>
+            <p><strong>Office:</strong> Student Support Desk</p>
+            <p><strong>Working Hours:</strong> Monday–Friday, 9 AM–5 PM</p>
+        </section>
+
+        <h2>Send Us a Message</h2>
+
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name" autocomplete="name" required>
+
+            <label for="enrollment">Enrollment Number</label>
+            <input type="text" id="enrollment" name="enrollment"
+                   placeholder="Enter your enrollment number">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" autocomplete="email" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile"
+                   placeholder="Enter your mobile number" autocomplete="tel">
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3"
+                      placeholder="Enter your address"></textarea>
+
+            <label for="emergency">Emergency Contact</label>
+            <input type="tel" id="emergency" name="emergency"
+                   placeholder="Enter an emergency contact number">
+
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="courses">Courses</option>
+                <option value="attendance">Attendance</option>
+                <option value="results">Results</option>
+                <option value="events">Events</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"
+                      placeholder="Write your message here" required></textarea>
+
+            <input type="submit" value="Send Message">
+            <input type="reset" value="Clear Form">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
