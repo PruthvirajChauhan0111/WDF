@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub - Your student dashboard for courses, events, attendance and academic resources.">
+    <title>StudentHub | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">StudentHub</a>
+
+                <button id="menuToggle"
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false">
+                    ☰
+                </button>
+
+                <nav aria-label="Main navigation">
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="courses.html">Courses</a>
+                    <a href="attendance.html">Attendance</a>
+                    <a href="result.html">Results</a>
+                    <a href="timetable.html">Timetable</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="login.html">Login</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="data.html">Data Explorer</a>
+                </nav>
+
+                <button id="themeToggle"
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Toggle light and dark theme">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Notification Banner -->
+        <section class="notification-banner" id="notificationBanner">
+            <div class="container">
+                <p>
+                    <strong>Welcome to StudentHub!</strong>
+                    Explore your academic resources and upcoming campus events.
+                </p>
+                <button id="closeNotification"
+                        type="button"
+                        aria-label="Dismiss notification">
+                    ×
+                </button>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-tag">YOUR CAMPUS, CONNECTED</p>
+
+                    <h1>Welcome to <span>StudentHub</span></h1>
+
+                    <p>
+                        Your one-stop platform to manage courses, check attendance,
+                        view results and stay updated with campus activities.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="courses.html" class="btn">Explore Courses</a>
+                        <a href="register.html" class="btn btn-secondary">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access -->
+        <section class="quick-access section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-subtitle">EVERYTHING IN ONE PLACE</p>
+                    <h2>Quick Access</h2>
+                    <p>Jump directly to the section you need.</p>
+                </div>
+
+                <div class="quick-access-grid">
+                    <article class="quick-card">
+                        <div class="quick-card-icon" aria-hidden="true">📚</div>
+                        <h3>Courses</h3>
+                        <p>Explore courses and learning resources.</p>
+                        <a href="courses.html">View Courses →</a>
+                    </article>
+
+                    <article class="quick-card">
+                        <div class="quick-card-icon" aria-hidden="true">📊</div>
+                        <h3>Attendance</h3>
+                        <p>Check your attendance information.</p>
+                        <a href="attendance.html">View Attendance →</a>
+                    </article>
+
+                    <article class="quick-card">
+                        <div class="quick-card-icon" aria-hidden="true">📝</div>
+                        <h3>Results</h3>
+                        <p>Access your academic result information.</p>
+                        <a href="result.html">View Results →</a>
+                    </article>
+
+                    <article class="quick-card">
+                        <div class="quick-card-icon" aria-hidden="true">📅</div>
+                        <h3>Timetable</h3>
+                        <p>Keep track of classes and schedules.</p>
+                        <a href="timetable.html">View Timetable →</a>
+                    </article>
+
+                    <article class="quick-card">
+                        <div class="quick-card-icon" aria-hidden="true">🎉</div>
+                        <h3>Campus Events</h3>
+                        <p>Discover workshops and campus activities.</p>
+                        <a href="events.html">Explore Events →</a>
+                    </article>
+
+                    <article class="quick-card">
+                        <div class="quick-card-icon" aria-hidden="true">🗂️</div>
+                        <h3>Data Explorer</h3>
+                        <p>Search, filter, sort and explore JSON datasets.</p>
+                        <a href="data.html">Explore Data →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Slider -->
+        <section class="slider-section section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-subtitle">DISCOVER STUDENTHUB</p>
+                    <h2>Explore What Matters</h2>
+                </div>
+
+                <div class="content-slider" aria-live="polite">
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <span class="slide-number">01 / 03</span>
+                            <h3>Learn and Grow</h3>
+                            <p>
+                                Explore available courses and make the most of
+                                your learning experience.
+                            </p>
+                            <a href="courses.html" class="btn">Browse Courses</a>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-content">
+                            <span class="slide-number">02 / 03</span>
+                            <h3>Stay Organized</h3>
+                            <p>
+                                Keep track of your attendance, academic results
+                                and class timetable.
+                            </p>
+                            <a href="dashboard.html" class="btn">Open Dashboard</a>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-content">
+                            <span class="slide-number">03 / 03</span>
+                            <h3>Stay Connected</h3>
+                            <p>
+                                Find campus activities and explore dynamically
+                                loaded StudentHub data.
+                            </p>
+                            <a href="data.html" class="btn">Explore Data</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button id="prevSlide" type="button"
+                                aria-label="Previous slide">←</button>
+                        <button id="nextSlide" type="button"
+                                aria-label="Next slide">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-subtitle">NEED HELP?</p>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            What is StudentHub?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                StudentHub is a student-focused website that
+                                brings academic resources and campus information
+                                together in one place.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            Where can I find my academic information?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Use the Attendance, Results, Timetable and
+                                Dashboard pages to explore the available sections.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            What does the Data Explorer do?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                It demonstrates how JavaScript fetches JSON data
+                                and provides search, filtering, sorting and
+                                pagination.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question"
+                                type="button"
+                                aria-expanded="false">
+                            How can I create an account?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Open the Register page and complete the
+                                registration form with the required information.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Section -->
+        <section class="modal-section section-padding">
+            <div class="container">
+                <div class="modal-promo">
+                    <div>
+                        <p class="section-subtitle">STUDENTHUB TOOLS</p>
+                        <h2>Discover More Features</h2>
+                        <p>
+                            Learn how the website organizes student resources
+                            and demonstrates interactive web development.
+                        </p>
+                    </div>
+
+                    <button id="openModal" class="btn" type="button">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="infoModal" class="modal"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="modalTitle"
+             aria-hidden="true">
+            <div class="modal-content">
+                <button id="closeModal"
+                        class="modal-close"
+                        type="button"
+                        aria-label="Close dialog">
+                    ×
+                </button>
+
+                <p class="section-subtitle">ABOUT THE PROJECT</p>
+                <h2 id="modalTitle">Welcome to StudentHub</h2>
+                <p>
+                    StudentHub is a web development project demonstrating
+                    responsive layouts, interactive JavaScript components,
+                    form validation and JSON-based data rendering.
+                </p>
+
+                <a href="data.html" class="btn">Open Data Explorer</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo">StudentHub</a>
+                    <p>Your campus, connected.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="data.html">Data Explorer</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 StudentHub. Built by Pruthviraj Chauhan.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

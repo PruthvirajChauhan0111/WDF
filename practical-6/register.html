@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for the StudentHub student portal.">
+    <title>StudentHub | Student Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎓 StudentHub</h1>
+        <p>Your Academic Journey, All in One Place</p>
+
+        <button
+            type="button"
+            class="theme-toggle"
+            id="themeToggle"
+            aria-pressed="false">
+            🌙 Dark Mode
+        </button>
+
+        <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="mainNavigation"
+            aria-label="Open navigation menu">
+            ☰ Menu
+        </button>
+
+        <nav id="mainNavigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="register-page">
+        <section class="register-intro">
+            <h2>Student Registration</h2>
+            <p>Create your StudentHub profile by completing all required fields.</p>
+        </section>
+
+        <form id="registrationForm" class="register-form" novalidate>
+            <h3 class="form-section-title">Personal Information</h3>
+
+            <label for="fullName">Full Name *</label>
+            <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                minlength="2"
+                maxlength="60"
+                aria-describedby="nameError"
+                required>
+            <span class="field-error" id="nameError"></span>
+
+            <label for="email">Email Address *</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="student@example.com"
+                autocomplete="email"
+                maxlength="254"
+                aria-describedby="emailError"
+                required>
+            <span class="field-error" id="emailError"></span>
+
+            <label for="mobile">Mobile Number *</label>
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="Enter mobile number"
+                autocomplete="tel"
+                inputmode="tel"
+                maxlength="20"
+                aria-describedby="mobileError"
+                required>
+            <span class="field-error" id="mobileError"></span>
+
+            <fieldset>
+                <legend class="form-section-title">Gender *</legend>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            aria-describedby="genderError">
+                        Female
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            aria-describedby="genderError">
+                        Male
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                            aria-describedby="genderError">
+                        Other
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="prefer-not-to-say"
+                            aria-describedby="genderError">
+                        Prefer not to say
+                    </label>
+                </div>
+
+                <span class="field-error" id="genderError"></span>
+            </fieldset>
+
+            <h3 class="form-section-title">Academic Information</h3>
+
+            <label for="course">Course / Program *</label>
+            <select
+                id="course"
+                name="course"
+                aria-describedby="courseError"
+                required>
+                <option value="">Select your course</option>
+                <option value="computer-engineering">Computer Engineering</option>
+                <option value="information-technology">Information Technology</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="electronics">Electronics Engineering</option>
+                <option value="other">Other</option>
+            </select>
+            <span class="field-error" id="courseError"></span>
+
+            <label for="year">Current Year / Semester Level *</label>
+            <select
+                id="year"
+                name="year"
+                aria-describedby="yearError"
+                required>
+                <option value="">Select your current year</option>
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+            </select>
+            <span class="field-error" id="yearError"></span>
+
+            <h3 class="form-section-title">Account Security</h3>
+
+            <label for="password">Password *</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a strong password"
+                autocomplete="new-password"
+                minlength="8"
+                aria-describedby="passwordHint passwordStrength strengthText passwordError"
+                required>
+
+            <small id="passwordHint" class="form-hint">
+                Minimum 8 characters, including uppercase and lowercase letters,
+                a number, and a symbol.
+            </small>
+
+            <div
+                id="passwordStrength"
+                class="password-strength"
+                role="progressbar"
+                aria-label="Password strength"
+                aria-valuemin="0"
+                aria-valuemax="4"
+                aria-valuenow="0">
+            </div>
+            <span id="strengthText" class="strength-text">
+                Enter a password to check its strength.
+            </span>
+            <span class="field-error" id="passwordError"></span>
+
+            <label for="confirmPassword">Confirm Password *</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Re-enter your password"
+                autocomplete="new-password"
+                aria-describedby="confirmPasswordError"
+                required>
+            <span class="field-error" id="confirmPasswordError"></span>
+
+            <label class="terms-option" for="terms">
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    aria-describedby="termsError"
+                    required>
+                <span>
+                    I have read and agree to the terms and conditions. *
+                </span>
+            </label>
+            <span class="field-error" id="termsError"></span>
+
+            <div
+                id="formMessage"
+                class="form-message"
+                role="status"
+                aria-live="polite"
+                tabindex="-1">
+            </div>
+
+            <div class="register-actions">
+                <input type="submit" value="Create Account">
+                <input type="reset" value="Clear Form">
+            </div>
+
+            <p class="register-login-link">
+                Already registered?
+                <a href="login.html">Go to Login</a>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+    </footer>
+
+    <!-- Existing Practical 4 interactions -->
+    <script src="script.js"></script>
+
+    <!-- Practical 5 registration validation -->
+    <script src="register.js"></script>
+</body>
+</html>
