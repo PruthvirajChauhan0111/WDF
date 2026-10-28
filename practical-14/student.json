@@ -1,0 +1,17 @@
+[
+  {"id":1,"name":"Aarav Patel","email":"aarav.patel@example.com","course":"BCA","year":1,"status":"Active"},
+  {"id":2,"name":"Diya Shah","email":"diya.shah@example.com","course":"BCA","year":2,"status":"Active"},
+  {"id":3,"name":"Rohan Mehta","email":"rohan.mehta@example.com","course":"BTech","year":3,"status":"Active"},
+  {"id":4,"name":"Priya Desai","email":"priya.desai@example.com","course":"BCA","year":1,"status":"Inactive"},
+  {"id":5,"name":"Kabir Joshi","email":"kabir.joshi@example.com","course":"BTech","year":2,"status":"Active"},
+  {"id":6,"name":"Anaya Trivedi","email":"anaya.trivedi@example.com","course":"BSc IT","year":3,"status":"Active"},
+  {"id":7,"name":"Vivaan Shah","email":"vivaan.shah@example.com","course":"BCA","year":4,"status":"Active"},
+  {"id":8,"name":"Isha Patel","email":"isha.patel@example.com","course":"BSc IT","year":1,"status":"Inactive"},
+  {"id":9,"name":"Arjun Mehta","email":"arjun.mehta@example.com","course":"BTech","year":4,"status":"Active"},
+  {"id":10,"name":"Mira Joshi","email":"mira.joshi@example.com","course":"BCA","year":3,"status":"Active"},
+  {"id":11,"name":"Reyansh Dave","email":"reyansh.dave@example.com","course":"BSc IT","year":2,"status":"Active"},
+  {"id":12,"name":"Sara Shah","email":"sara.shah@example.com","course":"BTech","year":1,"status":"Active"},
+  {"id":13,"name":"Dev Patel","email":"dev.patel@example.com","course":"BCA","year":2,"status":"Inactive"},
+  {"id":14,"name":"Kiara Desai","email":"kiara.desai@example.com","course":"BSc IT","year":4,"status":"Active"},
+  {"id":15,"name":"Yash Chauhan","email":"yash.chauhan@example.com","course":"BTech","year":3,"status":"Active"}
+]

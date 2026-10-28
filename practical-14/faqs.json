@@ -1,0 +1,17 @@
+[
+  {"id":1,"question":"How do I register on StudentHub?","category":"Account","answer":"Open the Register page and complete the registration form."},
+  {"id":2,"question":"How can I reset my password?","category":"Account","answer":"Use the password reset option when available, or contact support."},
+  {"id":3,"question":"Where can I see my attendance?","category":"Academics","answer":"Open the Attendance page from the main navigation."},
+  {"id":4,"question":"How do I check my results?","category":"Academics","answer":"Visit the Results page to view available result information."},
+  {"id":5,"question":"Where are upcoming events listed?","category":"Events","answer":"Open the Events page to see upcoming campus activities."},
+  {"id":6,"question":"Can I search for students?","category":"Students","answer":"Yes. Use the search box on the Data Explorer page."},
+  {"id":7,"question":"How do I filter students by course?","category":"Students","answer":"Choose a course from the course filter dropdown."},
+  {"id":8,"question":"Does StudentHub support mobile screens?","category":"General","answer":"The interface is designed to adapt to desktop, tablet and mobile screens."},
+  {"id":9,"question":"How do I contact the support team?","category":"General","answer":"Open the Contact page and use the listed contact information."},
+  {"id":10,"question":"Where can I find my timetable?","category":"Academics","answer":"Select Timetable from the navigation menu."},
+  {"id":11,"question":"How can I join a workshop?","category":"Events","answer":"Check event details and follow the registration instructions."},
+  {"id":12,"question":"Can I sort the student list?","category":"Students","answer":"Use the sort control to order students by name or year."},
+  {"id":13,"question":"Why is the data not loading?","category":"Technical","answer":"Make sure you opened the project through a local web server and the JSON files are available."},
+  {"id":14,"question":"What is the Data Explorer?","category":"General","answer":"It demonstrates fetching JSON data and applying search, filters, sorting and pagination."},
+  {"id":15,"question":"How do I report a technical issue?","category":"Technical","answer":"Use the Contact page and include a description of the issue."}
+]
